@@ -1,0 +1,171 @@
+.info {
+    @include blockPosition(116.8rem);
+    margin-top: 15.4rem;
+    &__openingHours {
+        @include fonts-descr(2.4rem, 500, 3.2rem);
+        @media (max-width: 750px) {
+            @include fonts-descr(2rem, 500, 2.2rem);
+        }
+    }
+    &__title {
+        @include fonts-descr(6.4rem, 700, 8.8rem);
+        @media (max-width: 750px) {
+            @include fonts-descr(4rem, 700, 6.2rem);
+        }
+    }
+    &__connection {
+        @include flex(row, space-between);
+        margin-top: 4rem;
+        align-items: center;
+        @media (max-width: 1100px) {
+            @include flex(column-reverse, center);
+            gap: 5rem;
+        }
+    }
+    &__socials {
+        @include flex(row, space-between);
+        gap: 2.5rem;
+        &_item {
+            border: 1px solid $primaryColor;
+            border-radius: 50%;
+            width: 4.8rem;
+            height: 4.8rem;
+            text-align: center;
+            @include flex(row, center);
+            @include fonts-descr(1.6rem, 600, 2.4rem);
+            align-items: center;
+            &:hover {
+                color: $baseHoverColor;
+                border: 1px solid $baseHoverColor;
+            }
+        }
+        @media (max-width: 1100px) {
+            justify-content: center;
+        }
+    }
+    &__btn {
+        background-color: $btnBackgroundColor;
+        border: none;
+        @include fonts-descr(1.8rem, 500, 2.4rem);
+        padding: 3.8rem 6.4rem;
+        width: 27rem;
+        &:hover {
+            transform: scale(1.05) translate3d(0,0,0);
+            color: $baseHoverColor;
+            @include shadow(1);
+        }
+        @media (max-width: 750px) {
+            padding: 1.8rem 3.4rem;
+        }
+    }
+}
+.reservePopup {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(#000, 0.8);
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    &.visible {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    &__form {
+        padding: 5rem 5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 300;
+        transition: 0.3s;
+        @include flex(column, center);
+        text-align: start;
+        padding: 3rem;
+        width: 50rem;
+        max-width: 80%;
+        gap: 1rem;
+        .inputfield{
+            max-width: 100%;
+            @include flex(row, space-between);
+            flex-wrap: nowrap;
+            @media (max-width: 750px) {
+                flex-direction: column;
+            }
+        }
+        .label{ 
+            @include fonts-descr(1.8rem, 500, 4rem, $darkColor);
+            text-align: left;
+        }
+        input[type=text], input[type=tel], input[type=number] {
+            font-size: 2rem;
+            color: #b5b1b1;
+            border: 2px solid $btnBackgroundColor;
+            &::placeholder { 
+               text-align: end;
+           }
+        }
+        
+        .input:focus { /*this changes the look of the text box when you select it*/
+            outline: 2px solid $btnBackgroundColor;
+            border-radius: 1rem;
+            &::placeholder { 
+               font-size: 1rem; /* Размер шрифта */
+               transform: translateY(-13px);; /* Сдвигаем вверх */
+              }
+        }
+        
+        input[type=submit] {
+            background-color:$btnBackgroundColor;
+            border:2px solid $btnBackgroundColor;
+            border-radius: 4rem;
+            padding: 1.5rem 1.5rem;
+            margin-top:2rem;
+            margin-bottom: 3rem;
+            font-size: 2.4rem;
+            color: white;
+        }
+        input[type=checkbox]:focus {
+            outline:none;
+        }
+        
+        input[type=submit]:hover{
+            background-color: $btnBackgroundColor;
+            border: 2px solid $btnBackgroundColor;
+        }
+        
+        input[type=submit]:active{
+            background-color: white;
+            color:#f6a5a5;
+        }
+       
+        @media (max-width: 750px) {
+            .inputfield {
+              max-width: 100%;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            input[type=text], input[type=number] {
+                width: 100%;
+            }
+       }
+       
+       input::-webkit-outer-spin-button,
+       input::-webkit-inner-spin-button {
+           /* display: none; <- Crashes Chrome on hover */
+           -webkit-appearance: none;
+           margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+       }
+        
+    }
+    .submit {
+        @include flex(row, center);
+    }
+}

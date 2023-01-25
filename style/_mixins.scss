@@ -1,0 +1,20 @@
+@mixin fonts-descr($f-size, $f-weight, $line-height, $color: $primaryColor) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin flex($direction: row, $justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+@mixin blockPosition($width) {
+    width: $width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@mixin shadow($depth) {
+    box-shadow: 0 0 ($depth * 8px) 0 rgba(0,0,0,0.2),
+    ($depth * 2px) ($depth * 4px) ($depth * 4px) 0 rgba(0,0,0,0.25);
+}

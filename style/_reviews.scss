@@ -1,0 +1,52 @@
+.reviews {
+    background-color: $bgReviews;
+    @include flex(row, center);
+    align-items: center;
+    padding: 22rem 1rem;
+    &__slider {
+        @include blockPosition(116.8rem);
+        position: relative;
+    }
+}
+.swiper {
+    width: 800px;
+    max-width: 90%;
+}
+.swiper-slide {
+    @include flex(column, center);
+    align-items: center;
+    text-align: center;
+    &__title {
+        @include fonts-descr(3.6rem, 600, 4rem, $goldenColor);
+        width: 78.5rem;
+        max-width: 100%
+    }
+    &__text {
+        @include fonts-descr(1.6rem, 400, 4rem, $primaryColor);
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        width: 78.5rem;
+        max-width: 100%
+    }
+    &__name {
+        @include fonts-descr(2.4rem, 600, 4rem, $goldenColor);
+    }
+}
+.swiper-nav {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.prev {
+    position: absolute;
+    top: -20rem;
+    left: 0;
+    cursor: pointer;
+}
+.next {
+    position: absolute;
+    top: -20rem;
+    right: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzeezotje</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.min.css">
+</head>
+<body>
+    <div class="topBackground">
+        <header class="header">
+            <a href="#" class="header__logo">
+                <img src="./img/logo.png" alt="логотип">
+            </a>
+            <div class="mobile-headerPopup">
+
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">      
+                        <a href="#">À la carte</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#">Wijnkaart</a> 
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#">Lunchmenu</a> 
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#">Contact</a> 
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <div class="header__contact">
+                <img src="./img/phoneIcon.svg" alt="phone" width="24px">
+                <a href="tel:+74951234567" class="phone">+32 9 282 57 25</a>
+            </div>
+        </header>
+        <section class="info">
+            <p class="info__openingHours">OPEN EVERYDAY 6AM - 9PM</p>
+            <p class="info__title">A bad day with lunch is better than a good day without it.</p>
+            <div class="info__connection">
+                <button class="info__btn" id="reserve">Reserve a table</button>
+                <ul class="info__socials">
+                    <li class="info__socials_item">
+                        <a href="#">Fb</a>
+                    </li>
+                    <li class="info__socials_item">
+                        <a href="#">Lg</a>
+                    </li>
+                    <li class="info__socials_item">
+                        <a href="#">Tw</a>
+                    </li>
+                    <li class="info__socials_item">
+                        <a href="#">Yt</a>
+                    </li>
+                </ul>
+                <div class="reservePopup">
+                    <form class="reservePopup__form">
+                        <div class="inputfield">
+                            <label for="name" class="label">Your name</label>
+                            <input type="text" name="name" id="name" class="input" placeholder="Anastasia" required>
+                        </div>
+                        <div class="inputfield">
+                            <label for="number" class="label">Your phone</label>
+                            <input type="number" name="number" id="number" class="input" placeholder="+79002221456" required>
+                        </div>
+                        <div class="inputfield">
+                            <label for="window" class="label">Need a table near the window</label>
+                            <input type="checkbox" name="window" id="window" class="input">
+                        </div>
+                        <div class="inputfield checkbox">
+                            <label for="bar" class="label">Need a table near the bar</label>
+                            <input type="checkbox" name="bar" id="bar" class="input">
+                        </div>
+                        <div class="inputfield">
+                            <label for="bar" class="label">Any table location</label>
+                            <input type="checkbox" name="bar" id="bar" class="input">
+                        </div>
+                        <div class="inputfield submit">
+                            <input type="submit" value="Call me" class="submitbutton">
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="menu">
+        <ul class="menu__list">
+            <li class="menu__list_item">
+                <p class="menu__list_item-name">Woensdag 12/01</p>
+                <div class="menu__list_item-text">
+                    <span>Toast Roquefort</span>
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <span>Penne met Kip en Prei</span>
+                </div>
+            </li>
+            <li>
+                <p class="menu__list_item-name">Donderdag 13/01</p>
+                <div class="menu__list_item-text">
+                    <span>Verrassing van de Chef</span>
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <span>Penne met Kip en Prei</span>
+                </div>
+            </li>
+            <li>
+                <p class="menu__list_item-name">Vrijdag 14/01</p>
+                <div class="menu__list_item-text">
+                    <span>Verrassing van de Chef</span>
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <span>Penne met Kip en Prei</span>
+                </div>
+            </li>
+            <li>
+                <p class="menu__list_item-name">Vrijdag 16/01</p>
+                <div class="menu__list_item-text">
+                    <span>Verrassing van de Chef</span>
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <span>Penne met Kip en Prei</span>
+                </div>
+            </li>
+            <li>
+                <p class="menu__list_item-name">Woensdag 12/01</p>
+                <div class="menu__list_item-text">
+                    <span>Salade met Serrano</span>
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <img src="./img/Ellipse.svg" alt="Ellipse">
+                    <span>Steak Tartaar</span>
+                </div>
+            </li>
+        </ul>
+        <div class="images">
+            <img src="./img/Rectangle.png" alt="" class="images__img">
+            <img src="./img/Rectangle8.png" alt="" class="images__img">
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="reviews__slider">
+            <div class="swiper review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p class="swiper-slide__title">
+                            Goede service, lekker eten, toffe ambiance
+                        </p>
+                        <div class="swiper-slide__text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                            labore et dolore magna aliquyam erat, sed diam voluptua.
+                            At vero eos et accusam et justo duo  dolores et ea rebum. Stet clita kasd gubergren.
+                        </div>
+                        <span class="swiper-slide__name">
+                            ALAIN HEYNDRICKX
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="swiper-slide__title">
+                            Goede service, lekker eten, toffe ambiance
+                        </p>
+                        <div class="swiper-slide__text">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                            labore et dolore magna aliquyam erat, sed diam voluptua.
+                            At vero eos et accusam et justo duo  dolores et ea rebum. Stet clita kasd gubergren.
+                        </div>
+                        <span class="swiper-slide__name">
+                            ALAIN HEYNDRICKX
+                        </span>
+                    </div>
+                </div>
+            </div>    
+            <div class="swiper-nav">
+                <img class="prev" src="./img/Vector.svg"></img>
+                <img class="next" src="./img/Vector1.svg"></img>
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
