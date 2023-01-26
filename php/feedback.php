@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $to            = 'ana8@icloud.com';
+    $to            = 'anastasia621998@icloud.com';
     $subject       = 'Reserve Table';
     $name          = (string)$_POST['name'];
     $number        = (string)$_POST['number'];
@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
     $message .= 'any: ' . $any_answer;
 
     mail($to, $subject, $message);
+    echo 'The vote was send';
 } else {
     http_response_code(400);
 }
