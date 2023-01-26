@@ -16,13 +16,27 @@ headerBurger.addEventListener('click', () => {
 const mobilePopup = document.querySelector(".mobile-headerPopup");
 const menu = document.querySelector(".header__nav-list").cloneNode(1);
 
+const form = document.getElementById('reserveForm');
+
 headerBurger.addEventListener('click', openPopup);
+form.addEventListener('submit', onSubmitForm);
 
 function openPopup(e) {
   e.preventDefault();
   toggleClass(mobilePopup, 'open');
   renderPopup();
   noScroll();
+}
+
+function onSubmitForm(e) {
+  e.preventDefault();
+  let formData = new FormData(e.target);
+  fetch('./php/feedback.php', {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors',
+  }).then(() => alert('The vote was send'))
+    .catch(() => alert('Error'))
 }
 
 function renderPopup() {
