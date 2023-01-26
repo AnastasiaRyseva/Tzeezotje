@@ -14,6 +14,7 @@
         }
     }
     &__connection {
+        cursor: pointer;
         @include flex(row, space-between);
         margin-top: 4rem;
         align-items: center;
@@ -49,8 +50,9 @@
         @include fonts-descr(1.8rem, 500, 2.4rem);
         padding: 3.8rem 6.4rem;
         width: 27rem;
+        cursor: pointer;
         &:hover {
-            transform: scale(1.05) translate3d(0,0,0);
+            transform: scale(1.05) translate3d(0,0,0) 0.3s;
             color: $baseHoverColor;
             @include shadow(1);
         }
@@ -167,5 +169,8 @@
     }
     .submit {
         @include flex(row, center);
+    }
+    .submitbutton {
+        cursor: pointer;
     }
 }

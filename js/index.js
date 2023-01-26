@@ -1,16 +1,16 @@
 //функция для смены класса у блока
-const changeActiveBlock = function(block, nameClass) {
-    block.classList.toggle(`${nameClass}`)
+const toggleClass = function (block, nameClass) {
+  block.classList.toggle(`${nameClass}`)
 }
 //убрать скролл на странице
-const noScroll = function() {
+const noScroll = function () {
   document.body.classList.toggle('noscroll');
 }
 //анимация бургер-меню
 const headerBurger = document.querySelector('.header__burger');
 
 headerBurger.addEventListener('click', () => {
-  changeActiveBlock(headerBurger, 'active');
+  toggleClass(headerBurger, 'active');
 })
 // открытие и закрытие навигации в мобильной версии
 const mobilePopup = document.querySelector(".mobile-headerPopup");
@@ -20,7 +20,7 @@ headerBurger.addEventListener('click', openPopup);
 
 function openPopup(e) {
   e.preventDefault();
-  changeActiveBlock(mobilePopup,'open');
+  toggleClass(mobilePopup, 'open');
   renderPopup();
   noScroll();
 }
@@ -29,10 +29,10 @@ function renderPopup() {
   mobilePopup.appendChild(menu);
 }
 
-menu.addEventListener('click', function() {
-  changeActiveBlock(mobilePopup,'open');
+menu.addEventListener('click', function () {
+  toggleClass(mobilePopup, 'open');
   noScroll();
-  changeActiveBlock(headerBurger,'active');
+  toggleClass(headerBurger, 'active');
 })
 
 // открытие и закрытие окна резервации столика
@@ -40,12 +40,12 @@ const reservePopup = document.querySelector('.reservePopup');
 const reserveBtn = document.getElementById('reserve');
 const reserveForm = document.querySelector('.reservePopup__form');
 
-reserveBtn.onclick = function() {
-  changeActiveBlock(reservePopup, 'visible');
+reserveBtn.onclick = function () {
+  toggleClass(reservePopup, 'visible');
 }
-reservePopup.addEventListener('click', function(e) {
-  if(!e.composedPath().includes(reserveForm))
-    changeActiveBlock(reservePopup, 'visible');
+reservePopup.addEventListener('click', function (e) {
+  if (!e.composedPath().includes(reserveForm))
+    toggleClass(reservePopup, 'visible');
 })
 
 //слайдер
@@ -54,7 +54,8 @@ new Swiper('.swiper', {
   spaceBetween: 30,
   navigation: {
     nextEl: '.next',
-		prevEl: '.prev'
-},
+    prevEl: '.prev'
+  },
   speed: 500,
+  loop: true,
 });

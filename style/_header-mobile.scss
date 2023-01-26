@@ -34,6 +34,12 @@
         &:hover {
             background-color: $baseHoverColor;
         }
+        padding-left: 5.6rem;
+    }
+}
+@media (max-width: 320px) {
+    .mobile-headerPopup {
+        top: 15rem;
     }
 }
 .header__burger {
@@ -43,6 +49,7 @@
         width: 3rem;
         height: 2rem;
         position: relative; 
+        cursor: pointer;
     }
     &:before,
     &:after {
